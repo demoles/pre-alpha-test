@@ -15,31 +15,112 @@
   </head>
   <body class="gallery-page">
 <!--Navigation-->
-    <nav class="navbar navbar-expand-sm navbar-light bg-light">
+<nav class="navbar navbar-expand-sm navbar-light bg-light">
+  <div class="container">
     <a class="navbar-brand" href="#">Our Shop</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
+    <div class="collapse navbar-collapse main_navbar" id="navbarNav">
       <ul class="navbar-nav w-100 justify-content-center">
-        <li class="nav-item active">
-          <a class="nav-link" href="./">Home <span class="sr-only">(current)</span></a>
+        <li class="nav-item nav_item active">
+          <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
         </li>
-        <li class="nav-item">
+        <li class="nav-item nav_item">
           <a class="nav-link" href="gallery.html">Gallery</a>
         </li>
-        <li class="nav-item">
+        <li class="nav-item nav_item">
           <a class="nav-link" href="#">About</a>
         </li>
-        <li class="nav-item">
+        <li class="nav-item nav_item">
           <a class="nav-link" href="#">Contact</a>
         </li>
-        <li class="nav-item">
+        <li class="nav-item nav_item">
           <a class="nav-link" href="#">Pricing</a>
         </li>
       </ul>
     </div>
-  </nav>
+<!-- Sing up/Login -->
+    <div class="nav navbar-nav navbar-right">
+      <!-- Button trigger modal -->
+      <button type="button" class="btn btn-outline-secondary" data-toggle="modal" data-target="#exampleModalCenter">
+        Sing up/Login
+      </button>
+
+      <!-- Modal -->
+      <div class="modal fade modal_login" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="text-right">
+              <button type="button" class="close text-right" data-dismiss="modal" aria-label="Close">
+                <span class="close_sing" aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body modal_body_sing">
+              <div class="container-fluid">
+                <!-- Tabs -->
+                <ul class="nav nav-tabs"  id="myTab" role="tablist">
+                  <li class="nav-item">
+                    <a class="nav-link active text-secondary" id="home-tab" data-toggle="tab" href="#first_tab" role="tab" aria-controls="first_tab" aria-selected="true">Sing up</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link text-secondary" id="profile-tab" data-toggle="tab" href="#second_tab" role="tab" aria-controls="second_tab" aria-selected="false">Login</a>
+                  </li>
+                </ul>
+                <!-- Tabs end -->
+                <div class="tab-content" id="myTabContent">
+                  <div class="tab-pane fade show active" id="first_tab" role="tabpanel" aria-labelledby="home-tab">
+                    <!-- 1st tab form -->
+                    <form>
+                      <div class="form-group">
+                        <label class="label_text" for="exampleInputEmail1">Name</label>
+                        <input type="text" class="form-control" id="exampleInputtext"  placeholder="Enter name">
+                      </div>
+                      <div class="form-group">
+                        <label class="label_text" for="exampleInputEmail1">Email</label>
+                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                      </div>
+                      <div class="form-group">
+                        <label class="label_text" for="exampleInputPassword1">Password</label>
+                        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                      </div>
+                      <button type="submit" class="btn btn-dark btn-block but_sing">Sing up</button>
+                      <div id="or"><p>Or</p></div>
+                      <button type="submit" class="btn btn-primary btn-block but_google">Continue with Google</button>
+                    </form>
+                    <!-- 1st tab form end -->
+                  </div>
+                  <div class="tab-pane fade" id="second_tab" role="tabpanel" aria-labelledby="profile-tab">
+                    <!-- 2nd tab form -->
+                    <form>
+                      <div class="form-group">
+                        <label class="label_text" for="exampleInputEmail1">Email</label>
+                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                      </div>
+                      <div class="form-group">
+                        <label class="label_text" for="exampleInputPassword1">Password</label>
+                        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                      </div>
+                      <button type="submit" class="btn btn-dark btn-block but_sing">Login</button>
+                      <div id="or"><p>Or</p></div>
+                      <button type="submit" class="btn btn-primary btn-block but_google">Continue with Google</button>
+                      <div class="forgot_pass text-center">
+                        <a href="#"><p id="forgot_pass">Forgot password?</p></a>
+                      </div>
+                    </form>
+                    <!-- 2nd tab form end -->
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+<!-- Sing up/Login end-->
+  </div>
+</nav>    
 
   <!--Card-Columns-->
     <div class="container container-gallery ">
@@ -62,7 +143,7 @@
                             <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
                             <button type="button" class="btn btn-outline-dark btn-sm" data-dismiss="modal">Close</button>
                           </div>
-                          <div class="modal-body">
+                          <div class="modal-body modal-body-gal">
 
 <!--Container  Modal-->     <div class="container-fluid">
 
